@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="icon" type="image/png" href="./Asset/logoEG1.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/sharedComponent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>  
+        <button onclick="showNav(this)">
+                <i class="fa-solid fa-bars"></i>  
+        </button>
+        <nav> 
+            <div class="nav_left">
+                <a class="logo" href="index.html">
+                    <img id="logoEG" src="./Asset/logoEG.png" alt="logo">
+                </a>
+                <a href="index.html">Home</a>
+                <a href="store.html"> Store</a>
+                <a class="active" href="news.html">News</a>
+                <a href="contact.html"> Contact</a>
+                <a href="aboutus.html"> About Us</a>
+            </div>
+            <div class="nav_right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="account.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>News</h1>
+        <div class="hotnews">
+            <h2>Hot news</h2>
+            <div class="news-container">
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews1.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">Game update</span>
+                            <span class="game-name">Rimworld</span>
+                            <span class="time">3 days ago</span>
+                        </div>
+                        <h3>The RimWorld - Odyssey expansion is out now!</h3>
+                        <p>
+                            RimWorld’s free update 1.6 is out now - you don’t need to own Odyssey to get it. This update brings massive performance improvements, reworked map generation, flying animals, and quality-of-life changes across caravans, plans, building, UI, and more. Read more about it here or check out the changelog here.
+                        </p>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews2.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">News</span>
+                            <span class="game-name">Stellaris</span>
+                            <span class="time">2 days ago</span>
+                        </div>
+                        <h3>Stellaris Dev Diary #387 - 4.0.21 is Out, What’s Next?</h3>
+                        <p>
+                            by Eladrin
+                            <br>
+                            Hello, Stellaris community!
+                            <br>
+                            Last week I said the next dev diary would be on the 26th, but I didn’t want to wait that long to discuss our plans moving forward.
+                            <br>
+                            This week we released 4.0.21, with the following changes:
+                        </p>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="image-frame">
+                        <img src="Asset/hotnews3.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="header">
+                            <span class="topic">News</span>
+                            <span class="game-name">BODYCAM</span>
+                            <span class="time">1 day ago</span>
+                        </div>
+                        <h3>🔧 Roadmap Update – Optimization, Loadout, Zombie & More</h3>
+                        <p>
+                            Hi everyone,<br>
+                            We’re kicking off a new format here on Steam: regular updates on our roadmap progress.<br>
+                            We usually post dev leaks (images, info, early previews) on our official Discord, but since not everyone is there, we’ll now keep you updated here as well.                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="navButton">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+        </div>
+        <div class="AllNewsGroup">
+            <h2>All news</h2>
+            <div class="allNews"></div>
+            <div id="button-frame">
+                <button id="loadMore">Load more</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img id="img-footer" src="./Asset/logoEG.png" alt="">
+        <div class="footer-container">
+            <div>
+                <p>Browse</p>
+                <div class="browse">
+                    <a href="index.html">Home</a>
+                    <a href="store.html">Store</a>
+                    <a href="news.html">News</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="acount.html">Account</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+            <div>
+                <p>Folow us on</p>
+                <div class="follow">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>Contact</p>
+                <div class="contact">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/index.js"></script>
+    <script>
+        loadNews();
+    </script>
+</body>
+</html>

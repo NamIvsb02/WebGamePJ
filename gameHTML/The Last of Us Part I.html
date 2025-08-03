@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>The Last of Us™ Part I on EGStore</title>
+  <link rel="icon" type="image/png" href="../Asset/logoEG1.png" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/gamePage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <dialog id="cart-Detail">
+    <div class="wrapper">
+      <div class="bar">
+        <i class="fa-solid fa-info"></i>
+        <i onclick="showDialog(false)" id="close" class="fa-solid fa-xmark"></i>
+      </div>
+      <h1>An item was added to your cart</h1>
+      <a href="../cart.html">View My Cart</a>
+    </div>
+  </dialog>
+  <header>
+    <nav>
+      <div class="nav_left">
+        <a class="logo" href="../home.html">
+          <img id="logoEG" src="../Asset/logoEG.png" alt="logo" />
+        </a>
+        <a href="../home.html">Home</a>
+        <a href="../store.html"> Store</a>
+        <a href="../news.html">News</a>
+        <a href="../contact.html"> Contact</a>
+        <a href="../aboutus.html"> About Us</a>
+      </div>
+      <div class="nav_right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="../account.html">
+          <i class="fa-regular fa-user"></i>
+          <span>Account</span>
+        </a>
+        <a href="../cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 data-id="game08" id="gameID">Game Name</h1>
+    <div class="gameContainer">
+      <div class="gamePicture">
+        <img id="image" src="" alt="img" />
+        <div class="Side">
+          <img id="header" src="" alt="header" />
+          <div class="content">
+            <p id="sideDescription"></p>
+            <table id="sideInformation"></table>
+          </div>
+        </div>
+      </div>
+      <h2>Game Gallery</h2>
+      <div class="gameGallery">
+        <button id="left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div id="picContainer" class="pictureContainer"></div>
+        <button id="right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="buyGame">
+      <h1 id="buyName">Buy GameName</h1>
+      <img class="bg-img" src="" />
+      <div class="Container">
+        <div class="priceContainer"></div>
+        <button onclick="addToCart()">Add to cart</button>
+      </div>
+    </div>
+    <div class="aboutGame">
+      <h2>About this game</h2>
+      <div class="about">
+        <p>
+          The game is set in the year 2033, twenty years after a devastating pandemic caused by a parasitic fungus known
+          as Cordyceps. This outbreak has transformed much of the human population into
+          aggressive, zombie-like creatures driven by primal instincts and an insatiable hunger.
+        </p>
+        <br />
+        <p>
+          Society has crumbled in the wake of the infection. Cities lie in ruins, nature slowly reclaims abandoned
+          buildings, and survivors live under the constant threat of both the infected and
+          ruthless human factions. The remaining government operates through heavily militarized quarantine zones, often
+          prioritizing control over compassion.
+        </p>
+        <br />
+        <p>
+          Amid this chaos, the story follows characters who struggle to maintain their humanity in a world stripped of
+          order and hope. As players explore the bleak and dangerous landscape, they must
+          face moral dilemmas, forge unlikely bonds, and fight for survival in a world where trust is a rare and
+          precious thing.
+        </p>
+        <br />
+      </div>
+    </div>
+    <div class="rating">
+      <h2>Rating</h2>
+      <div class="ratingContainer">
+        <div>
+          <div class="score">
+            <span>10</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>
+            The game is a cinematic experience that could make a rock emotional, offering newcomers and seasoned
+            zombifiers alike the chance to experience that jaw-dropping, heart-pounding feeling.
+          </p>
+          <p class="reviewer">Metacretic</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>8.0</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>
+            The original The Last of Us will always be my favourite PlayStation game. The narrative is amazing, the
+            relationship between Joel and Ellie is wholesome and it all culminates into a
+            satisfying story that will bring tears to your eyes.
+          </p>
+          <p class="reviewer">PCGamer</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>9.0</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>
+            A gorgeous and well-honed remake of one of the biggest boppers in the PlayStation pantheon, The Last of Us
+            Part I is the best way to play – or replay – Naughty Dog’s esteemed survival
+            classic.
+          </p>
+          <p class="reviewer">IGN</p>
+        </div>
+        <div>
+          <div class="score">
+            <span>10</span>
+            <span class="total">/10</span>
+          </div>
+          <i class="fa-solid fa-quote-left"></i>
+          <p>This game is a masterpiece, with its story, graphics, realism and gameplay done perfectly.</p>
+          <p class="reviewer">Users</p>
+        </div>
+      </div>
+    </div>
+    <div class="requirements">
+    </div>
+  </main>
+
+  <footer>
+    <img id="img-footer" src="../Asset/logoEG.png" alt="" />
+    <div class="footer-container">
+      <div>
+        <p>Browse</p>
+        <div class="browse">
+          <a href="../home.html">Home</a>
+          <a href="../store.html">Store</a>
+          <a href="../news.html">News</a>
+          <a href="../aboutus.html">About us</a>
+          <a href="../acount.html">Account</a>
+          <a href="../cart.html">Cart</a>
+        </div>
+      </div>
+      <div>
+        <p>Folow us on</p>
+        <div class="follow">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <p>Contact</p>
+        <div class="contact">
+          <a href="#"><i class="fas fa-map-marker-alt"></i>Khu 2, Đ. 3/2, P. Ninh Kiều, TP. Cần Thơ</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>EG_Game@eg.com.vn</a>
+          <a href="#"><i class="fa-solid fa-phone"></i>+84 19000009</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../script/index.js"></script>
+  <script>
+    loadGame();
+  </script>
+</body>
+
+</html>
